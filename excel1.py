@@ -19,3 +19,5 @@ class logcheck():
         else :
         
             return False
+
+'''COMMENT, this is.''' 
