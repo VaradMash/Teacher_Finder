@@ -47,20 +47,30 @@ def passwordIncorrect():
     nlw.setVisible(True)
                        
 def teacherPortal1():
-    
     #tp1.show()
     #app1.exec()
-    tp1.pushButton.clicked.connect(backLogin)
+    tp1.backPB.clicked.connect(backLogin)
     
+
 def backLogin():
     tp1.setVisible(False)
     nlw.setVisible(True)
-    
+
+def comboBox():
+    tName=nlw.comboBox1.currentText()
+    #the above will return the value of the selected name in the drop down menu/Combo box
+    tSlot=nlw.comboBox2.currentText()
+    #the above will get the time slot in string format
+
+    #temporary labels to test the values
+    nlw.labelx.setText(tName)
+    nlw.labely.setText(tSlot)
 
 '''app1=QtWidgets.QApplication([])
 newui=uic.loadUi('PasswordCheck.ui')'''
 nlw.proceedNLW.clicked.connect(teacherlogin)
 #nlw.proceedNLW.clicked.connect(clo)
+nlw.submitNLW.clicked.connect(comboBox)
 pdisplay.proceedPB.clicked.connect(passwordDisplay)
 nlw.show()
 app.exec()

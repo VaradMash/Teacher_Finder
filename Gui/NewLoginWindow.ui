@@ -24,95 +24,237 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>student</string>
      </attribute>
-     <widget class="QWidget" name="formLayoutWidget">
+     <widget class="QComboBox" name="comboBox1">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>60</y>
-        <width>371</width>
-        <height>161</height>
+        <x>100</x>
+        <y>100</y>
+        <width>87</width>
+        <height>37</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="departmentLabel">
-         <property name="text">
-          <string>Department</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="departmentLineEdit"/>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="rollNoLabel">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="sizeIncrement">
-          <size>
-           <width>5</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="lineWidth">
-          <number>16</number>
-         </property>
-         <property name="midLineWidth">
-          <number>15</number>
-         </property>
-         <property name="text">
-          <string>roll no.</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::RichText</enum>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-         <property name="indent">
-          <number>13</number>
-         </property>
-         <property name="textInteractionFlags">
-          <set>Qt::LinksAccessibleByMouse</set>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="rollNoLineEdit"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="passwordLabel">
-         <property name="text">
-          <string>password</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="passwordLineEdit"/>
-       </item>
-      </layout>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="statusTip">
+       <string>Select the required faculty</string>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="maxVisibleItems">
+       <number>50</number>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>NVS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MDB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NPS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>LL</string>
+       </property>
+      </item>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QLabel" name="label2">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>270</y>
-        <width>93</width>
-        <height>28</height>
+        <x>460</x>
+        <y>40</y>
+        <width>124</width>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="text">
-       <string>Proceed</string>
+       <string>Time slot</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label1">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>166</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="text">
+       <string>Faculty Code</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submitNLW">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>220</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sumbit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelx">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>330</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>100</y>
+        <width>165</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="statusTip">
+       <string>Select the time slot</string>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="maxVisibleItems">
+       <number>50</number>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="duplicatesEnabled">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>Home Room</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8:00-9:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9:00-10:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10:15-11:15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11:15-12:15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1:00-2:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2:00-3:00</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3:00-4:00</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="labely">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>330</y>
+        <width>171</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
