@@ -1,6 +1,7 @@
 from PyQt5 import QtWidgets,uic
 import excel1 as e
 import sys
+import SlotSelect as s
 
 
 app=QtWidgets.QApplication([])
@@ -59,12 +60,16 @@ def backLogin():
 def comboBox():
     tName=nlw.comboBox1.currentText()
     #the above will return the value of the selected name in the drop down menu/Combo box
-    tSlot=nlw.comboBox2.currentText()
+    tSlot=nlw.comboBox2.currentIndex()
     #the above will get the time slot in string format
 
+    #Getting he cel value
+    f=s.get_slot(tName,tSlot,1)
+    print(f)
+
     #temporary labels to test the values
-    nlw.labelx.setText(tName)
-    nlw.labely.setText(tSlot)
+    nlw.labelx.setText(str(tName))
+    nlw.labely.setText(str(tSlot))
 
 '''app1=QtWidgets.QApplication([])
 newui=uic.loadUi('PasswordCheck.ui')'''
