@@ -27,6 +27,8 @@ def studentwin():
     palette1=QPalette()
     palette1.setBrush(QPalette.Window,QBrush(s1Image))
     sw.setPalette(palette1)
+    sw.back_sw.clicked.connect(back_sw)
+    #this will lead to previous window
 
     sw.submitNLW_2.clicked.connect(comboBox)
 
@@ -36,7 +38,7 @@ def comboBox():
     tSlot=sw.comboBox2_2.currentIndex()
     #the above will get the time slot in string format
 
-    #Getting he cel value
+    #Getting the cell value
     f=s.get_slot(tName,tSlot,1)
     print(f)
 
@@ -53,6 +55,8 @@ def facultywin():
     palette1=QPalette()
     palette1.setBrush(QPalette.Window,QBrush(s1Image))
     fw.setPalette(palette1)
+    fw.back_fw.clicked.connect(back_fw)
+    #this will lead to previous window
 
 def teacherlogin():
     
@@ -116,7 +120,14 @@ def passwordIncorrect():
 
 def backLogin():
     tp.setVisible(False)
-    fw.setVisible(True)    
+    fw.setVisible(True)
+
+def back_fw():
+    fw.setVisible(False)
+    fp.setVisible(True)
+def back_sw():
+    sw.setVisible(False)
+    fp.setVisible(True)    
 
 fp.student_button.clicked.connect(studentwin)
 fw.proceedFW.clicked.connect(teacherlogin)#this is the change.LOL
