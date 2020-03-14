@@ -37,10 +37,12 @@ def comboBox():
     #the above will return the value of the selected name in the drop down menu/Combo box
     tSlot=sw.comboBox2_2.currentIndex()
     #the above will get the time slot in string format
+    tDate=sw.comboBox2_3.currentIndex()
 
     #Getting the cell value
-    f=s.get_slot(tName,tSlot,1)
+    f,r=s.get_slot(tName,tSlot,tDate)
     print(f)
+    print(r)
 
     #temporary labels to test the values
     sw.labelx_2.setText(str(tName))
