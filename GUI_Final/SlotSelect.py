@@ -18,4 +18,3 @@ def get_slot(name,slot_no,day):
 
 
   
-get_slot('NVS',2,1)

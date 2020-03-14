@@ -6,6 +6,8 @@ import sys
 import os
 import excel1 as e
 import SlotSelect as s
+
+
 username=''
 app=QtWidgets.QApplication([])
 fp=uic.loadUi('FirstPage.ui')
@@ -43,6 +45,8 @@ def comboBox():
     f,r=s.get_slot(tName,tSlot,tDate)
     print(f)
     print(r)
+
+    
 
     #temporary labels to test the values
     sw.labelx_2.setText(str(tName))
