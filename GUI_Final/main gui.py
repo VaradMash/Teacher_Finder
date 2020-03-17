@@ -6,6 +6,8 @@ import sys
 import os
 import excel1 as e
 import SlotSelect as s
+
+
 username=''
 app=QtWidgets.QApplication([])
 fp=uic.loadUi('FirstPage.ui')
@@ -27,6 +29,8 @@ def studentwin():
     palette1=QPalette()
     palette1.setBrush(QPalette.Window,QBrush(s1Image))
     sw.setPalette(palette1)
+    sw.back_sw.clicked.connect(back_sw)
+    #this will lead to previous window
 
     sw.submitNLW_2.clicked.connect(comboBox)
 
@@ -35,10 +39,14 @@ def comboBox():
     #the above will return the value of the selected name in the drop down menu/Combo box
     tSlot=sw.comboBox2_2.currentIndex()
     #the above will get the time slot in string format
+    tDate=sw.comboBox2_3.currentIndex()
 
-    #Getting he cel value
-    f=s.get_slot(tName,tSlot,1)
+    #Getting the cell value
+    f,r=s.get_slot(tName,tSlot,tDate)
     print(f)
+    print(r)
+
+    
 
     #temporary labels to test the values
     sw.labelx_2.setText(str(tName))
@@ -53,6 +61,8 @@ def facultywin():
     palette1=QPalette()
     palette1.setBrush(QPalette.Window,QBrush(s1Image))
     fw.setPalette(palette1)
+    fw.back_fw.clicked.connect(back_fw)
+    #this will lead to previous window
 
 def teacherlogin():
     
@@ -116,7 +126,14 @@ def passwordIncorrect():
 
 def backLogin():
     tp.setVisible(False)
-    fw.setVisible(True)    
+    fw.setVisible(True)
+
+def back_fw():
+    fw.setVisible(False)
+    fp.setVisible(True)
+def back_sw():
+    sw.setVisible(False)
+    fp.setVisible(True)    
 
 fp.student_button.clicked.connect(studentwin)
 fw.proceedFW.clicked.connect(teacherlogin)#this is the change.LOL
