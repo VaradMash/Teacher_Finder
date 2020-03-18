@@ -19,6 +19,8 @@ app3=QtWidgets.QApplication([])
 pdisplay=uic.loadUi('PasswordDisplay.ui')
 app4=QtWidgets.QApplication([])
 tp=uic.loadUi('TeacherPortal1.ui')
+app5=QtWidgets.QApplication([])
+rw=uic.loadUi('resultwindow.ui')
 
 def studentwin():
     app1.exec()
@@ -35,6 +37,19 @@ def studentwin():
     sw.submitNLW_2.clicked.connect(comboBox)
 
 def comboBox():
+    app5.exec()
+    sw.setVisible(False)
+    rw.setVisible(True)
+    o3Image=QImage("nback.jpg")
+    s3Image=o3Image.scaled(QSize(1091,425))
+    palette3=QPalette()
+    palette3.setBrush(QPalette.Window,QBrush(s3Image))
+    rw.setPalette(palette3)
+    rw.rback.clicked.connect(back_rw)
+       
+    
+
+
     tName=sw.comboBox1_2.currentText()
     #the above will return the value of the selected name in the drop down menu/Combo box
     tSlot=sw.comboBox2_2.currentIndex()
@@ -45,13 +60,13 @@ def comboBox():
     f,r=s.get_slot(tName,tSlot,tDate)
     print(f)
     print(r)
-
+    #a=str(tName)+"  :  "+str(tSlot)
+    rw.rfl.setText(str(tName))
+    rw.rsl.setText(str(tSlot))
     
 
-    #temporary labels to test the values
-    sw.labelx_2.setText(str(tName))
-    sw.labely_2.setText(str(tSlot))
-
+    
+  
 def facultywin():
     app2.exec()
     fp.setVisible(False)
@@ -133,7 +148,10 @@ def back_fw():
     fp.setVisible(True)
 def back_sw():
     sw.setVisible(False)
-    fp.setVisible(True)    
+    fp.setVisible(True)
+def back_rw():
+    rw.setVisible(False)
+    sw.setVisible(True)
 
 fp.student_button.clicked.connect(studentwin)
 fw.proceedFW.clicked.connect(teacherlogin)#this is the change.LOL
