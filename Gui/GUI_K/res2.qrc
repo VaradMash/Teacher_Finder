@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>k gal.jpg</file>
+  </qresource>
+  <qresource prefix="logoreal">
+    <file>logomain.jpg</file>
+  </qresource>
+  <qresource prefix="back">
+    <file>backschool.jpg</file>
+  </qresource>
+</RCC>
