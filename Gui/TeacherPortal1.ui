@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1265</width>
+    <height>849</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,29 +17,50 @@
    <widget class="QPushButton" name="backPB">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>480</x>
       <y>210</y>
-      <width>75</width>
-      <height>23</height>
+      <width>291</width>
+      <height>81</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Leelawadee</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(170, 170, 127)</string>
     </property>
     <property name="text">
      <string>Back to Login</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1271</width>
+      <height>851</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:url(:/back/BACKGROUND.png)</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>backPB</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="GUI_K/r4.qrc"/>
+ </resources>
  <connections/>
 </ui>

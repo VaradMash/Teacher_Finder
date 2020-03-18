@@ -94,7 +94,7 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>600</x>
+       <x>570</x>
        <y>210</y>
        <width>450</width>
        <height>80</height>
@@ -113,7 +113,7 @@
     <widget class="QLabel" name="usernameLabel">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>530</x>
        <y>340</y>
        <width>220</width>
        <height>70</height>
@@ -128,13 +128,13 @@
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Username:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#c6f9fd;&quot;&gt;Username:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="passwordLabel_2">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>530</x>
        <y>480</y>
        <width>220</width>
        <height>70</height>
@@ -149,7 +149,7 @@
       </font>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Password:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#cdf4f2;&quot;&gt;Password:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QPushButton" name="back_fw">
