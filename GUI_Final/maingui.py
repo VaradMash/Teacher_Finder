@@ -61,8 +61,8 @@ def comboBox():
     print(f)
     print(r)
     #a=str(tName)+"  :  "+str(tSlot)
-    rw.rfl.setText(str(tName))
-    rw.rsl.setText(str(tSlot))
+    rw.rfl.setText(f)
+    rw.rsl.setText(r)
     
 
     
@@ -127,12 +127,16 @@ def teacherPortal1():
     #app1.exec()
     tp.EditTTPB.clicked.connect(editTT)
     tp.backPB.clicked.connect(backLogin)
+    tp.MarkLeavePB.clicked.connect(markLeave)
+    
 
 def editTT():
 	os.startfile(username+'.xlsx')
 def markLeave():
 	#please add the required code
-	pass
+	#pass
+        
+        os.startfile(username+'.txt')
 
 
 def passwordIncorrect():
@@ -142,6 +146,9 @@ def passwordIncorrect():
 def backLogin():
     tp.setVisible(False)
     fw.setVisible(True)
+    fw.usernameLE.setText("")
+    
+    fw.passwordLE.setText("")
 
 def back_fw():
     fw.setVisible(False)
