@@ -21,6 +21,8 @@ app4=QtWidgets.QApplication([])
 tp=uic.loadUi('TeacherPortal1.ui')
 app5=QtWidgets.QApplication([])
 rw=uic.loadUi('resultwindow.ui')
+app6=QtWidgets.QApplication([])#Calendar
+cal=uic.loadUi('cal1.ui')
 
 def studentwin():
     app1.exec()
@@ -127,17 +129,43 @@ def teacherPortal1():
     #app1.exec()
     tp.EditTTPB.clicked.connect(editTT)
     tp.backPB.clicked.connect(backLogin)
-    tp.MarkLeavePB.clicked.connect(markLeave)
+    tp.MarkLeavePB.clicked.connect(opencal)
     
 
 def editTT():
 	os.startfile(username+'.xlsx')
+
+def opencal():
+    app6.exec()
+    cal.setVisible(True)
+    cal.pushButton.clicked.connect(markLeave)
+	
 def markLeave():
 	#please add the required code
 	#pass
         
-        os.startfile(username+'.txt')
-
+    
+    t=str(cal.calendarWidget.selectedDate())
+    t=t.lstrip('PyQt5.QtCore.QDate')
+    t=t.lstrip('(')
+    t=t.rstrip(')')
+    z=t.split(',')
+    z=[i.lstrip(' ') for i in z]
+    d=[]
+    for i in z:
+        if len(i)==1:
+            d.append('0'+i)
+        else:
+            d.append(i)
+   
+            
+    u=('-'.join(d))
+    print(u)
+        
+    f=open(username+'.txt','a')
+    f.write('\n')
+    f.write(u)
+    f.close()
 
 def passwordIncorrect():
     pdisplay.setVisible(False)
